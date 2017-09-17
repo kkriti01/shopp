@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+</head>
+
+<body ng-controller="master">
+<nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Season</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><i class="large material-icons">add_shopping_cart</i><span class="count">[[count]]</span></li>
+        <li><a href="#">Track Order</a></li>
+        <li><a href="#">Signup</a></li>
+        <li><a href="#">Log In</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+
+        <li class="tab" ng-repeat="item in category"><a href="/#!/[[item.id]]/">[[item.name]]</a></li>
+
+      </ul>
+    </div>
+</nav>
+<div ng-view></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/master.js"></script>
+<script src="/static/js/product.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+.card .card-content .card-title {
+    display: block;
+    line-height: 32px;
+    margin-bottom: 0px;
+}
+
+.btn, .btn-large {
+    text-decoration: none;
+    color: #fff;
+    background-color: #26a69a;
+    text-align: center;
+    letter-spacing: .5px;
+    font-size: 10px;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+
+.card.small .card-image, .card.medium .card-image, .card.large .card-image {
+    max-height: 60%;
+    overflow: hidden;
+    margin-top: 59px;
+}
+.count{
+    margin-top: 10px;
+}
